@@ -2,12 +2,12 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import ListarProdutos from '../ListarProdutos';
+import CardListar from '../CardListar';
 
 function Produto() {
   return (
     <Container>
-      <ListarProdutos />
+      <CardListar />
       <Button variant="success">
         <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/">
           RETORNAR

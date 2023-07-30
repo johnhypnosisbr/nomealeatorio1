@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap";
 
 
 export function CardProduto({ nome, preco, descricao, image }) {
-    
+
     return (
         <>
             <div>
@@ -11,14 +11,13 @@ export function CardProduto({ nome, preco, descricao, image }) {
                     <Card.Img variant="top" src={image} />
                     <Card.Body>
                         <Card.Title>
-                            {nome} 
+                            {nome}
                         </Card.Title>
                         <Card.Text>
                             R$: {preco}
-                            <br/>
+                            <br />
                             {descricao}
                         </Card.Text>
-                        <Button variant="primary">Detalhes</Button>
                     </Card.Body>
                 </Card>
             </div>

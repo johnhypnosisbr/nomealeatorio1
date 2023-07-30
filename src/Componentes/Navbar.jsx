@@ -27,7 +27,7 @@ function CompNavbar() {
           <Nav.Link href="/home">Home</Nav.Link>
           <Nav.Link href="/produto">Produtos</Nav.Link>
           <p>
-            {name} | {email}
+            Sua conta: {name} | {email}
           </p>
         </Nav>
       </Container>

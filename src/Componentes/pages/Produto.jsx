@@ -11,7 +11,7 @@ function Produto() {
       <CompNavbar />
       <CardListar />
       <Button variant="success">
-        <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/">
+        <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/home">
           RETORNAR
         </Link>
       </Button>

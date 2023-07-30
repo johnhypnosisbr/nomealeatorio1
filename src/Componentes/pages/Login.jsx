@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
@@ -31,20 +31,20 @@ function Login() {
         }
 
 
-        try { 
+        try {
             const response = await fetch("https://webapp353621.ip-45-79-142-173.cloudezapp.io/api/login", options)
             const data = await response.json()
 
             //Guardar o token no localStorage
             const token = data.token
-            localStorage.setItem("token", token)            
+            localStorage.setItem("token", token)
             localStorage.setItem("nameLoggedUser", data.user.name)
             localStorage.setItem("emailLoggedUser", data.user.email)
             mensagemDeSucesso("LOGADO")
 
             navigate('/home')
 
-        } catch(error) {
+        } catch (error) {
             console.log(error.response)
             mensagemDeErro("DADOS INCORRETOS")
             return null
@@ -59,7 +59,7 @@ function Login() {
         //     .then((data) => {
         //         console.log(data)
         //         navigate('/home')
-                
+
         //     })
 
         //     .catch((error) => {
@@ -97,8 +97,7 @@ function Login() {
 
     return (
         <div>
-            <p>
-                {password} {email}
+            <p>Para logar, inserir:                 joao@joao.com | Joao123@
             </p>
             <form onSubmit={enviarEmailSenhaNumPostParaApiParaFazerLoginNoSite}>
                 <input type="text" name="email" onChange={manipularEmail} />

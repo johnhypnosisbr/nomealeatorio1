@@ -5,10 +5,12 @@ import { RouteApp } from './Routes';
 
 
 function App() {
-  return <div>
-    <ToastContainer />
-    <RouteApp />;
-  </div>
+  return (
+    <div className="bigOne">
+      <ToastContainer />
+      <RouteApp />;
+    </div>
+  )
 }
 
 export default App;

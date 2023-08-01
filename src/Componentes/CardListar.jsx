@@ -37,27 +37,25 @@ function CardListar() {
 
     return (
         <>
-            <Row className="justify-content-md-center">
-                <Col md={2}>
-                    <h1>Hortifruti</h1>
-                </Col>
+            <Row className="justify-content-md-center text-center">
+                <h1>Hortifruti</h1>
             </Row>
             <Row>
                 {produtos.map((produto, index) => {
                     return (
-                        <Card className="m-2" style={{ width: '18rem' }}>
+                        <Card className="m-2" style={{ margin: "auto", width: '12rem', height: "18rem" }} key={index}>
                             <Link to={`/product/${produto.slug}`}>
                                 <img src={produto.image} className="card-img-top img" alt={produto.name} />
                             </Link>
-                            <Card.Body>
-                                <Card.Title>{produto.title}</Card.Title>
+                            <Card.Body className="d-flex flex-column justify-center align-middle">
+                                <Card.Title style={{ fontSize: "14px" }}>{produto.title}</Card.Title>
                                 <Card.Text>${produto.price}</Card.Text>
                                 {produto.countInStock === 0 ? (
                                     <Button variant="light" disabled>
                                         Out of stock
                                     </Button>
                                 ) : (
-                                    <Button>
+                                    <Button style={{ fontSize: "12px" }}>
                                         Add to cart
                                     </Button>
                                 )}

@@ -9,7 +9,7 @@ export function RouteApp() {
 
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<BaseSistema componente={MinhasRotas} />} />
+                <Route path="/*" element={<BaseSistema componente={MinhasRotas} />} />
                 <Route path="/login" element={<Login />} />
             </Routes>
         </BrowserRouter>

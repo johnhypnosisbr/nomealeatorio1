@@ -5,9 +5,9 @@ import Produto from "../Componentes/pages/Produto";
 
 export function MinhasRotas() {
     return (
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/produto" element={<Produto />} />
-                    </Routes>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/produto" element={<Produto />} />
+        </Routes>
     );
 };

@@ -42,7 +42,7 @@ function Login() {
             localStorage.setItem("emailLoggedUser", data.user.email)
             mensagemDeSucesso("LOGADO")
 
-            navigate('/home')
+            navigate('/')
 
         } catch (error) {
             console.log(error.response)

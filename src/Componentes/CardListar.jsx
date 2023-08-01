@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
-import api from '../service/api';
-import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import api from '../service/api';
 
 
 function CardListar() {
@@ -50,7 +50,7 @@ function CardListar() {
                                 <img src={produto.image} className="card-img-top img" alt={produto.name} />
                             </Link>
                             <Card.Body>
-                                    <Card.Title>{produto.title}</Card.Title>
+                                <Card.Title>{produto.title}</Card.Title>
                                 <Card.Text>${produto.price}</Card.Text>
                                 {produto.countInStock === 0 ? (
                                     <Button variant="light" disabled>

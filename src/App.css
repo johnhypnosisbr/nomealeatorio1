@@ -3151,3 +3151,19 @@ section {
   border-radius: 50px;
   width: 80px;
 }
+
+.deslogarBtn {
+  height: 40px;
+  background-color: rgb(42, 146, 243);
+  border-radius: 5px;
+  border: none;
+}
+
+.divNav {
+  text-align: center;
+  justify-content: space-between;
+}
+
+.textoNomeLogin {
+  color: white;
+}

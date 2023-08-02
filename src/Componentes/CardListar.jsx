@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import api from '../service/api';
+import { useContext } from 'react';
+import { CarrinhoContext } from './CarrinhoContext';
 
 
 function CardListar() {
     const [produtos, setProdutos] = useState([]);
+    const { adicionarCarrinho } = useContext(CarrinhoContext)
 
     useEffect(() => {
         buscarProdutos();
@@ -35,15 +38,18 @@ function CardListar() {
         });
     }
 
+    function adicionarProduto(idProduto, nomeProduto, precoProduto, linkImagemProduto) {
+        adicionarCarrinho({ idProduto, nomeProduto, precoProduto, linkImagemProduto })
+    }
+
     return (
         <>
             <Row className="justify-content-md-center text-center">
-                <h1>Hortifruti</h1>
             </Row>
             <Row>
                 {produtos.map((produto, index) => {
                     return (
-                        <Card className="m-2" style={{ margin: "auto", width: '12rem', height: "18rem" }} key={index}>
+                        <Card className="m-20" style={{ margin: "auto", marginBottom: "5px", width: '12rem', height: "20rem" }} key={index}>
                             <Link to={`/product/${produto.slug}`}>
                                 <img src={produto.image} className="card-img-top img" alt={produto.name} />
                             </Link>
@@ -55,7 +61,7 @@ function CardListar() {
                                         Out of stock
                                     </Button>
                                 ) : (
-                                    <Button style={{ fontSize: "12px" }}>
+                                    <Button onClick={() => adicionarProduto(produto.id, produto.title, produto.price, produto.image)} style={{ fontSize: "12px" }}>
                                         Add to cart
                                     </Button>
                                 )}

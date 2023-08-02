@@ -1,28 +1,35 @@
-import { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import { Carousel } from "react-bootstrap";
+import img1 from "./../assets/images/banner_img (1).jpg";
+import img2 from "./../assets/images/banner_img (2).jpg";
+import img3 from "./../assets/images/banner_img (3).jpg";
+import img4 from "./../assets/images/banner_img (4).jpg";
+import img5 from "./../assets/images/banner_img (5).jpg";
+import img6 from "./../assets/images/banner_img (6).jpg";
 
-function ControlledCarousel() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
+function CarouselAnuncios() {
   return (
-    <div className="centro">
-      {/* <Carousel fade activeIndex={index} sm={12} md={12} lg={12} onSelect={handleSelect}> */}
-      {/* <Carousel.Item> */}
-      <img src="../img/hortifruti.png" className="imgRadius" />
-      {/* </Carousel.Item>
-        <Carousel.Item>
-          <img src="../img/safra.png" className="carousel" />
-        </Carousel.Item> */}
-      {/* <Carousel.Item>
-          <img src="../img/banner3.jpg" className="carousel" />
-        </Carousel.Item> */}
-      {/* </Carousel> */}
-    </div>
+    <Carousel>
+      <Carousel.Item>
+        <img className="w-100" src={img1} alt="First slide" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="d-block w-100" src={img2} alt="First slide" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="d-block w-100" src={img3} alt="Second slide" />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img className="d-block w-100" src={img4} alt="First slide" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="d-block w-100" src={img5} alt="First slide" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="d-block w-100" src={img6} alt="First slide" />
+      </Carousel.Item>
+    </Carousel>
   );
 }
 
-export default ControlledCarousel;
+export default CarouselAnuncios;

@@ -4,7 +4,7 @@ import CardListar from '../CardListar';
 
 function Produto() {
   return (
-    <Container style={{ margin: "auto", padding: "10%" }}>
+    <Container >
       <CardListar className="" />
     </Container>
   )

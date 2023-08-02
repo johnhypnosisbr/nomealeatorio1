@@ -54,7 +54,7 @@ function CardListar() {
                                 <img src={produto.image} className="card-img-top img" alt={produto.name} />
                             </Link>
                             <Card.Body className="d-flex flex-column justify-center align-middle">
-                                <Card.Title style={{ fontSize: "14px" }}>{produto.title}</Card.Title>
+                                <Card.Title style={{ fontSize: "14px", height: "20px", marginBottom: "15px" }}>{produto.title}</Card.Title>
                                 <Card.Text>${produto.price}</Card.Text>
                                 {produto.countInStock === 0 ? (
                                     <Button variant="light" disabled>

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useEffect, useState } from 'react';
-import { Badge } from 'react-bootstrap';
+import { Badge, Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -53,7 +53,7 @@ function CompNavbar() {
             <p style={{ color: "white", marginRight: "10px" }}>
               {name} <br></br> {email}
             </p>
-            <a href="/">
+            <a href="/carrinho">
               <Badge
                 style={{
                   position: "absolute",
@@ -69,7 +69,9 @@ function CompNavbar() {
             <button className="deslogarBtn" onClick={LimparLocalStorageParaDeslogar}>Deslogar</button>
           </>
         ) : (
-          <a href="/login">Login</a>
+          <a href="/login">
+            <Button variant="primary">LOGIN</Button>
+          </a>
         )
         }
       </Container>
